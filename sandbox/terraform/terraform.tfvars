@@ -11,12 +11,16 @@ subnets = {
   subnet1 = { vpc_name = "vpc1", cidr_block = "10.1.1.0/24", env = "dev" }
   subnet2 = { vpc_name = "vpc2", cidr_block = "10.2.1.0/24", env = "dev" }
   subnet3 = { vpc_name = "vpc1", cidr_block = "10.1.2.0/24", env = "dev" }
-  subnet4 = { vpc_name = "vpc3", cidr_block = "10.3.1.0/24", env = "dev" }
-  subnet5 = { vpc_name = "vpc3", cidr_block = "10.3.2.0/24", env = "dev" }
+  subnet4 = { vpc_name = "vpc1", cidr_block = "10.1.3.0/24", env = "dev" }
+  subnet5 = { vpc_name = "vpc3", cidr_block = "10.3.1.0/24", env = "dev" }
+  subnet6 = { vpc_name = "vpc2", cidr_block = "10.2.2.0/24", env = "dev" }
+  subnet7 = { vpc_name = "vpc2", cidr_block = "10.2.3.0/24", env = "dev" }
+  subnet8 = { vpc_name = "vpc3", cidr_block = "10.3.2.0/24", env = "dev" }
+  subnet9 = { vpc_name = "vpc3", cidr_block = "10.3.3.0/24", env = "dev" }
 }
 
 tags = {
-  Application = "pwc-lennar", Environment = "dev"
+  Application = "pwc-lennar", Environment = "dev", CostCenter="100"
 }
 
 peerings = {
