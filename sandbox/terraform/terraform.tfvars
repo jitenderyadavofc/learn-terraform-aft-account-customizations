@@ -3,7 +3,7 @@ vpc = {
 
   vpc1 = { name = "vpc01", cidr_block = "10.1.0.0/16", env = "dev" }
   vpc2 = { name = "vpc02", cidr_block = "10.2.0.0/16", env = "dev" }
-  vpc3 = { name = "vpc03", cidr_block = "10.8.0.0/16", env = "dev" }
+  vpc3 = { name = "vpc03", cidr_block = "10.3.0.0/16", env = "dev" }
 }
 
 
