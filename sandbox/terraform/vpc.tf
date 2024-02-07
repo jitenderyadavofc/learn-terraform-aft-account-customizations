@@ -1,8 +1,11 @@
-resource "aws_vpc" "main" {
-  cidr_block       = "10.3.0.0/16"
-  instance_tenancy = "default"
+module "aws-vpc-mod" {
+  source     = "../modules/vpc"
+  
+  tag_names  = var.tags
+  for_each   = var.vpc
+  cidr_block = each.value.cidr_block
+  name       = each.value.name
+  env        = each.value.env
 
-  tags = {
-    Name = "main"
-  }
+
 }
