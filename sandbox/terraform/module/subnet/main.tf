@@ -8,9 +8,13 @@ resource "aws_subnet" "aws-subnet" {
    vpc_id = data.aws_vpc.data-vpc.id
 
 
-     tags= {
-      for key1,value1 in var.tag_names:  
+     tags = merge( 
+     {"Name"=var.name},
+    {
+     
+     for key1,value1 in var.tag_names:  
         key1=>value1
-     }
+        
+        })
 
 }

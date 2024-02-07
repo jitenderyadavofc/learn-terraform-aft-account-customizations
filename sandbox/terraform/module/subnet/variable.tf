@@ -5,3 +5,7 @@ variable vpc_cidr{}
       variable "tag_names" {
         
       }
+
+      variable "name" {
+        
+      }
