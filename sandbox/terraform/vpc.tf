@@ -1,5 +1,5 @@
 module "aws-vpc-mod" {
-  source     = "../modules/vpc"
+  source     = "./module/vpc"
   
   tag_names  = var.tags
   for_each   = var.vpc
