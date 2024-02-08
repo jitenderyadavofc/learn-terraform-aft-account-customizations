@@ -29,7 +29,16 @@ resource "aws_vpc" "main" {
   enable_dns_support   = var.vpc_enable_dns_support
   instance_tenancy     = var.vpc_instance_tenancy
 
-  tags = { 
+  tags = local.common_tags
+}
 
-  }
+
+resource "aws_subnet" "private" {
+  cidr_block                                     = cidrsubnet(data.aws_vpc_ipam_pool.infra.cidr[0],4,2)
+  enable_dns64                                   = true
+  enable_resource_name_dns_aaaa_record_on_launch = false
+  enable_resource_name_dns_a_record_on_launch    = true
+  vpc_id                                         = aws_vpc.main.id
+
+  tags = local.common_tags
 }
