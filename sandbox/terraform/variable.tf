@@ -1,27 +1,9 @@
-variable "vpc" {
-
-}
-
-variable "subnets" {
-
-}
-
 variable "tags" {
-
+  description = "Common tags to be applied to all resources"
+  type        = map(string)
 }
-
-variable "peerings" {
-
+variable "accountName" {
+    
 }
-
-variable "transit_gateways" {
-
-}
-
-
-variable "tg_attachments" {
-
-}
-
 
 
